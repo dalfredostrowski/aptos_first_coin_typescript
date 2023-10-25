@@ -1,0 +1,92 @@
+history
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+NODE_MAJOR=20
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt-get update
+sudo apt-get install nodejs -y
+node -v
+npm i aptos
+sudo npm install -g pnpm
+sudo apt install python3-pip
+pip3 install aptos-sdk
+git clone https://github.com/aptos-labs/aptos-core.git
+curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+cd ~/aptos-core/ecosystem/typescript/sdk
+pnpm install
+cd examples/typescript
+pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
+
+
+
+
+
+  WARNING: The script httpx is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+
+
+
+ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/typescript/sdk/examples/typescript$ pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
+
+> ts-test@1.0.0 your_coin /home/ubuntu/aptos-core/ecosystem/typescript/sdk/examples/typescript
+> ts-node your_coin.ts "/home/ubuntu/aptos-core/aptos-move/move-examples/moon_coin"
+
+sh: 1: ts-node: not found
+ ELIFECYCLE  Command failed.
+ WARN   Local package.json exists, but node_modules missing, did you mean to install?
+
+
+
+
+https://askubuntu.com/questions/627346/how-to-set-path-in-ubuntu
+
+
+
+ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/typescript/sdk/examples/typescript$ npm install
+
+added 191 packages, and audited 192 packages in 30s
+
+65 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/typescript/sdk/examples/typescript$ pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
+
+> ts-test@1.0.0 your_coin /home/ubuntu/aptos-core/ecosystem/typescript/sdk/examples/typescript
+> ts-node your_coin.ts "/home/ubuntu/aptos-core/aptos-move/move-examples/moon_coin"
+
+
+=== Addresses ===
+Alice: 0x0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8
+Bob: 0xd43052cb86b252bedd2d57f9cff3b0322f7b445ef502d8e2905e08aba0b3998b
+Update the module with Alice's address, compile, and press enter.
+
+
+
+ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/moon_coin$ aptos move compile --named-addresses MoonCoin=0x0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8 --save-metadata
+Compiling, may take a little while to download git dependencies...
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Examples
+{
+  "Result": [
+    "0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8::moon_coin"
+  ]
+}
+
+
+
+Alice: 0x0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8
+Bob: 0xd43052cb86b252bedd2d57f9cff3b0322f7b445ef502d8e2905e08aba0b3998b
+Update the module with Alice's address, compile, and press enter.
+Publishing MoonCoin package.
+Bob's initial MoonCoin balance: 0.
+Alice mints herself some of the new coin.
+Alice transfers the newly minted coins to Bob.
+Bob's updated MoonCoin balance: 100.
+undefined
+ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/typescript/sdk/examples/typescript$
