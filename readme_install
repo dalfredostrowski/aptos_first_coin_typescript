@@ -22,9 +22,9 @@ curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 cd ~/aptos-core/ecosystem/typescript/sdk
 pnpm install
 
-# node modules missing error....
-npm install 
 cd examples/typescript
+
+npm install    # to avoid 'node modules' error
 pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
 
 
