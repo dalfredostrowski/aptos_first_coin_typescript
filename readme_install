@@ -75,6 +75,10 @@ Update the module with Alice's address, compile, and press enter.
 # full qualify aptos path if not set  in environment
 /home/ubuntu/.local/bin/aptos
 
+
+# log into the second terminal....
+
+
 # cd to ~/aptos-core/aptos-move/move-examples/moon_coin
 ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/moon_coin$ aptos move compile --named-addresses MoonCoin=0x0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8 --save-metadata
 Compiling, may take a little while to download git dependencies...
