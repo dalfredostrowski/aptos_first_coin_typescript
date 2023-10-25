@@ -94,9 +94,8 @@ Alice transfers the newly minted coins to Bob.
 
 
 
-
+references: 
 
 https://aptos.dev/tutorials/your-first-coin
-Bob's updated MoonCoin balance: 100.
-undefined
-ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/typescript/sdk/examples/typescript$
+
+https://explorer.aptoslabs.com/
