@@ -14,6 +14,8 @@ sudo apt install python3-pip
 pip3 install aptos-sdk
 git clone https://github.com/aptos-labs/aptos-core.git
 curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+
+npm install
 cd ~/aptos-core/ecosystem/typescript/sdk
 pnpm install
 cd examples/typescript
@@ -65,7 +67,7 @@ Bob: 0xd43052cb86b252bedd2d57f9cff3b0322f7b445ef502d8e2905e08aba0b3998b
 Update the module with Alice's address, compile, and press enter.
 
 
-
+/home/ubuntu/.local/bin/aptos
 ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/moon_coin$ aptos move compile --named-addresses MoonCoin=0x0acc1b2e5f47692d0820566590139e8fdd010eef8475b6ff15513aac22b3fbd8 --save-metadata
 Compiling, may take a little while to download git dependencies...
 INCLUDING DEPENDENCY AptosFramework
