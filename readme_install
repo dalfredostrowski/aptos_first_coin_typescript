@@ -15,9 +15,15 @@ pip3 install aptos-sdk
 git clone https://github.com/aptos-labs/aptos-core.git
 curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 
-npm install
+#NOTE: fullly qualify path for aptos via environemnt varible or in command line!
+
+#/home/ubuntu/.local/bin/aptos
+
 cd ~/aptos-core/ecosystem/typescript/sdk
 pnpm install
+
+# node modules missing error....
+npm install 
 cd examples/typescript
 pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
 
